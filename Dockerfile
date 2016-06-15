@@ -7,7 +7,7 @@ RUN apt-get update && \
       libhdf5-dev \
       libgif-dev \
       liblapack-dev && \
-      apt-get clean
+    apt-get clean
 RUN pip install zc.buildout
 COPY buildout.cfg /app/buildout.cfg
 WORKDIR /app
