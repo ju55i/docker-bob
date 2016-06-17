@@ -12,5 +12,6 @@ RUN pip install zc.buildout
 COPY buildout.cfg /app/buildout.cfg
 WORKDIR /app
 RUN buildout
-
-
+COPY app.py /app/app.py
+CMD bin/python app.py
+EXPOSE 5000
